@@ -76,15 +76,15 @@ const Achievements = () => {
                 <div className="icon-box flex-shrink-0">
                   <achievement.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="font-bold text-foreground">{achievement.title}</h3>
-                    <span className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded-full flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-2">
+                    <h3 className="font-bold text-foreground whitespace-normal break-words">{achievement.title}</h3>
+                    <span className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded-full flex items-center gap-1 w-fit flex-shrink-0">
+                      <Calendar className="w-3 h-3 flex-shrink-0" />
                       {achievement.date}
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{achievement.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -105,14 +105,14 @@ const Achievements = () => {
               {playerHighlights.map((player, index) => (
                 <div
                   key={player.name}
-                  className="flex items-center gap-4 p-4 bg-secondary/50 rounded-xl"
+                  className="flex items-center gap-4 p-4 bg-secondary/50 rounded-xl min-w-0"
                 >
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 flex-shrink-0 rounded-full bg-accent/10 flex items-center justify-center text-2xl">
                     {player.image}
                   </div>
-                  <div>
-                    <div className="font-semibold text-foreground">{player.name}</div>
-                    <div className="text-sm text-muted-foreground">{player.achievement}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-semibold text-foreground truncate">{player.name}</div>
+                    <div className="text-sm text-muted-foreground truncate">{player.achievement}</div>
                   </div>
                 </div>
               ))}

@@ -104,7 +104,7 @@ const Achievements = () => {
             <div className="space-y-4">
               {playerHighlights.map((player, index) => (
                 <div
-                  key={player.name}
+                  key={`${player.name}-${index}`}
                   className="flex items-center gap-4 p-4 bg-secondary/50 rounded-xl min-w-0"
                 >
                   <div className="w-12 h-12 flex-shrink-0 rounded-full bg-accent/10 flex items-center justify-center text-2xl">

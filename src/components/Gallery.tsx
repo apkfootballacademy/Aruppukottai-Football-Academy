@@ -7,10 +7,10 @@ import gallery3 from '@/assets/gallery-3.jpg';
 import gallery4 from '@/assets/gallery-4.jpg';
 
 const images = [
-  { src: gallery1, alt: 'Team celebration', span: 'md:col-span-2 md:row-span-2' },
-  { src: gallery2, alt: 'Training drills', span: '' },
-  { src: gallery3, alt: 'Team photo', span: '' },
-  { src: gallery4, alt: 'Goalkeeper training', span: 'md:col-span-2' },
+  { src: gallery1, alt: 'Aruppukottai football team celebration', span: 'md:col-span-2 md:row-span-2' },
+  { src: gallery2, alt: 'Football training drills in Aruppukottai', span: '' },
+  { src: gallery3, alt: 'Aruppukottai Youth Football Academy players', span: '' },
+  { src: gallery4, alt: 'Aruppukottai goalkeeper professional training', span: 'md:col-span-2' },
 ];
 
 const Gallery = () => {

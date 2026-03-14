@@ -29,7 +29,7 @@ const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={aboutImage}
-                alt="Academy training session"
+                alt="Aruppukottai Football Academy Training Session"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/50 to-transparent" />
@@ -48,7 +48,7 @@ const About = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-foreground">4+</div>
-                  <div className="text-sm text-muted-foreground">Years of Excellence</div>
+                  <div className="text-sm text-muted-foreground">Years in Aruppukottai</div>
                 </div>
               </div>
             </motion.div>
@@ -60,26 +60,26 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
-              About the Academy
-            </span>
+            <h1 className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+              About Aruppukottai's Top Academy
+            </h1>
             <h2 className="section-title">
-              Nurturing Tomorrow's{' '}
+              Nurturing Aruppukottai's{' '}
               <span className="text-gradient">Football Champions</span>
             </h2>
-            <p className="section-subtitle mt-6 mb-8">
-              Aruppukottai Football Academy is dedicated to developing disciplined, 
-              skilled footballers through professional training. We focus on fitness, 
-              teamwork and confidence building in a safe, structured environment.
+            <p className="section-subtitle mt-6 mb-8 text-justify">
+              Aruppukottai Football Academy is the premier sports institution in Virudhunagar district dedicated to developing disciplined, 
+              skilled footballers through professional training. We focus on physical fitness, 
+              teamwork, and athletic confidence in a safe, structured environment right here in Aruppukottai.
             </p>
 
             {/* Mission Statement */}
             <div className="bg-secondary/50 rounded-xl p-6 mb-8 border-l-4 border-accent">
-              <h3 className="font-semibold text-foreground mb-2">Our Mission</h3>
-              <p className="text-muted-foreground text-sm">
-                To provide grassroots football development that transforms young 
-                players into confident athletes, preparing them for competitive 
-                football and life success.
+              <h3 className="font-semibold text-foreground mb-2">Our Mission in Aruppukottai</h3>
+              <p className="text-muted-foreground text-sm text-justify">
+                To provide world-class grassroots football development that transforms young 
+                local players into highly competitive athletes, preparing them for state-level 
+                tournaments and successful careers.
               </p>
             </div>
 

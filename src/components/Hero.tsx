@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="Football training session"
+          alt="Professional football training at Aruppukottai Academy"
           className="w-full h-full object-cover"
         />
         <div

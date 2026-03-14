@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="APK Academy"
             className="h-10 w-auto object-contain"
           />
-          <div className="block">
+          <div className={isScrolled ? 'block' : 'hidden sm:block'}>
             <span
               className={`font-bold text-lg transition-colors ${
                 isScrolled ? 'text-foreground' : 'text-white'

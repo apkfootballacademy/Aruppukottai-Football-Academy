@@ -46,12 +46,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const whatsappNumber = "918870864437";
+    const text = `Hello Aruppukottai Football Academy! 👋
+
+*New Inquiry Details:*
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Player Age:* ${formData.age || 'Not specified'}
+*Message:* ${formData.message || 'No message provided'}`;
     
-    toast.success('Thank you! We will contact you soon.');
-    setFormData({ name: '', phone: '', age: '', message: '' });
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    // Small delay for UX feel
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    
+    toast.success('Redirecting to WhatsApp...');
     setIsSubmitting(false);
+    
+    // Reset form
+    setFormData({ name: '', phone: '', age: '', message: '' });
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
   };
 
   return (

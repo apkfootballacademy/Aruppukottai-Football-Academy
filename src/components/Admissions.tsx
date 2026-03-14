@@ -33,7 +33,7 @@ const eligibility = [
 
 const Admissions = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section id="admissions" className="section-padding bg-accent relative overflow-hidden">
@@ -127,14 +127,14 @@ const Admissions = () => {
 
             <div className="space-y-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+918870864437"
                 className="btn-accent w-full justify-center group"
               >
                 <Phone className="w-5 h-5" />
-                Call Now: +91 98765 43210
+                Call Now: +91 8870864437
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20joining%20Aruppu%20Kottai%20Football%20Academy"
+                href="https://wa.me/918870864437?text=Hi%2C%20I%20am%20interested%20in%20joining%20Aruppu%20Kottai%20Football%20Academy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-[#25D366] text-white hover:bg-[#20BD5A]"

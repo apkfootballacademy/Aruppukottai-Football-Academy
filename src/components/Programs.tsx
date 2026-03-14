@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Baby, GraduationCap, Trophy, Dumbbell, ArrowRight } from 'lucide-react';
+import { Baby, GraduationCap, ArrowRight } from 'lucide-react';
 
 const programs = [
   {
@@ -22,29 +22,11 @@ const programs = [
     level: 'Intermediate',
     color: 'from-accent to-emerald-600',
   },
-  {
-    icon: Trophy,
-    title: 'Advanced Training',
-    age: 'Ages 16–21',
-    description: 'Elite-level coaching for serious players aiming for professional careers.',
-    focus: ['Advanced tactics', 'Mental strength', 'Career preparation'],
-    level: 'Advanced',
-    color: 'from-gold to-amber-600',
-  },
-  {
-    icon: Dumbbell,
-    title: 'Fitness & Conditioning',
-    age: 'All Ages',
-    description: 'Specialized fitness programs to enhance speed, strength, and endurance.',
-    focus: ['Strength training', 'Cardio', 'Flexibility'],
-    level: 'All Levels',
-    color: 'from-red-500 to-orange-500',
-  },
 ];
 
 const Programs = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section id="programs" className="section-padding bg-secondary/30">
@@ -71,7 +53,7 @@ const Programs = () => {
         </motion.div>
 
         {/* Programs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {programs.map((program, index) => (
             <motion.div
               key={program.title}

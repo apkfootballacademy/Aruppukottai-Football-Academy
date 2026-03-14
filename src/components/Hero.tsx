@@ -57,7 +57,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10"
           >
             Professional football training for young talents in Aruppukottai.
-            Where champions are made through dedication, teamwork, and excellence.
+            Where champions are made through dedication, teamwork and excellence.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -86,8 +86,8 @@ const Hero = () => {
           >
             {[
               { number: '200+', label: 'Students Trained' },
-              { number: '10+', label: 'Years Experience' },
-              { number: '15+', label: 'Tournaments Won' },
+              { number: '4+', label: 'Years Experience' },
+              { number: '10+', label: 'Tournaments Won' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-gold mb-1">

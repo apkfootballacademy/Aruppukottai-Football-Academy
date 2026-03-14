@@ -13,7 +13,7 @@ const highlights = [
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section id="about" className="section-padding bg-background">
@@ -47,7 +47,7 @@ const About = () => {
                   <Target className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">10+</div>
+                  <div className="text-2xl font-bold text-foreground">4+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
               </div>
@@ -68,9 +68,9 @@ const About = () => {
               <span className="text-gradient">Football Champions</span>
             </h2>
             <p className="section-subtitle mt-6 mb-8">
-              Aruppu Kottai Football Academy is dedicated to developing disciplined, 
+              Aruppukottai Football Academy is dedicated to developing disciplined, 
               skilled footballers through professional training. We focus on fitness, 
-              teamwork, and confidence building in a safe, structured environment.
+              teamwork and confidence building in a safe, structured environment.
             </p>
 
             {/* Mission Statement */}

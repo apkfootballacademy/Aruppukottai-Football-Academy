@@ -45,7 +45,7 @@ const features = [
 
 const WhyChooseUs = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section className="section-padding bg-primary relative overflow-hidden">
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-            The Aruppu Kottai Advantage
+            The Aruppukottai Advantage
           </h2>
           <p className="text-lg text-primary-foreground/70">
             What sets our academy apart and makes us the preferred choice for 

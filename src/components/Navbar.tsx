@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="APK Academy"
             className="h-10 w-auto object-contain"
           />
-          <div className="hidden sm:block">
+          <div className="block">
             <span
               className={`font-bold text-lg transition-colors ${
                 isScrolled ? 'text-foreground' : 'text-white'
@@ -79,13 +79,13 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="tel:+919876543210"
+            href="tel:+918870864437"
             className={`flex items-center gap-2 font-medium text-sm transition-colors ${
               isScrolled ? 'text-foreground' : 'text-white'
             }`}
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden xl:inline">+91 98765 43210</span>
+            <span className="hidden xl:inline">+91 8870864437</span>
           </a>
           <a href="#admissions" className="btn-accent text-sm px-5 py-2.5">
             Join Now
@@ -116,13 +116,35 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    setTimeout(() => {
+                      const target = document.querySelector(link.href);
+                      if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 50);
+                  }}
                   className="text-foreground/80 hover:text-foreground font-medium py-2 transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-              <a href="#admissions" className="btn-accent text-center mt-2">
+              <a 
+                href="#admissions" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  setTimeout(() => {
+                    const target = document.querySelector('#admissions');
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 50);
+                }}
+                className="btn-accent text-center mt-2"
+              >
                 Join the Academy
               </a>
             </div>

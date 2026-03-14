@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonials = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section className="section-padding bg-background">

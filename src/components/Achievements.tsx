@@ -6,21 +6,21 @@ import { Trophy, Medal, Star, Calendar } from 'lucide-react';
 const achievements = [
   {
     icon: Trophy,
-    title: 'District Champions 2024',
-    description: 'U-15 team won the district-level football championship.',
-    date: 'March 2024',
+    title: 'District Champions 2026',
+    description: 'U-10 team won the Virudhunagar district-level football championship.',
+    date: 'February 15, 2026',
   },
   {
     icon: Medal,
-    title: 'State Tournament Finalists',
-    description: 'Youth team reached the finals of the Tamil Nadu state tournament.',
-    date: 'January 2024',
+    title: 'RPFC Football Tournament',
+    description: 'Secured Runner-up position in the RPFC football league tournament.',
+    date: 'January 11, 2026',
   },
   {
     icon: Star,
-    title: 'Best Academy Award',
-    description: 'Recognized as the best grassroots football academy in the region.',
-    date: 'December 2023',
+    title: 'Sattur Open Tournament',
+    description: 'Achieved 2nd Runner-up against top regional teams in a highly competitive tournament.',
+    date: 'November 10, 2024',
   },
   {
     icon: Trophy,
@@ -31,14 +31,14 @@ const achievements = [
 ];
 
 const playerHighlights = [
-  { name: 'Rajesh K.', achievement: 'Player of the Month', image: '🏆' },
-  { name: 'Vijay S.', achievement: 'Top Scorer', image: '⚽' },
-  { name: 'Arun M.', achievement: 'Best Defender', image: '🛡️' },
+  { name: 'Yuga Bharathi', achievement: 'Player of the Month', image: '🏆' },
+  { name: 'Yuga Bharathi', achievement: 'Top Scorer', image: '⚽' },
+  { name: 'Athi', achievement: 'Best Defender', image: '🛡️' },
 ];
 
 const Achievements = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <section id="achievements" className="section-padding bg-secondary/30">

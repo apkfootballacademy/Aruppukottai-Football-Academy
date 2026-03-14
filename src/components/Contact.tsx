@@ -8,14 +8,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '+91 98765 43210',
-    link: 'tel:+919876543210',
+    content: '+91 8870864437',
+    link: 'tel:+918870864437',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
     content: 'Chat with us',
-    link: 'https://wa.me/919876543210',
+    link: 'https://wa.me/918870864437',
   },
   {
     icon: Mail,
@@ -33,7 +33,7 @@ const contactInfo = [
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, amount: 'some' });
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

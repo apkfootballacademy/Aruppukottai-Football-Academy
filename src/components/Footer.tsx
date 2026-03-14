@@ -107,7 +107,8 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm text-center md:text-left">
-            © {currentYear} Aruppu Kottai Football Academy. All rights reserved.
+            © {currentYear} Aruppukottai Football Academy.{' '}
+            <span className="block sm:inline mt-1 sm:mt-0">All rights reserved.</span>
           </p>
           <p className="text-primary-foreground/60 text-sm">
             Crafted with ♥ by{' '}

@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useTransform, animate, useMotionValue } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import { useEffect } from 'react';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
@@ -85,22 +86,37 @@ const Hero = () => {
             className="grid grid-cols-3 gap-8 max-w-lg mx-auto mt-16"
           >
             {[
-              { number: '200+', label: 'Students Trained' },
-              { number: '4+', label: 'Years Experience' },
-              { number: '10+', label: 'Tournaments Won' },
+              { number: 200, suffix: '+', label: 'Students Trained' },
+              { number: 4, suffix: '+', label: 'Years Experience' },
+              { number: 10, suffix: '+', label: 'Tournaments Won' },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-gold mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-xs md:text-sm text-white/70">{stat.label}</div>
-              </div>
+              <AnimatedStat key={stat.label} stat={stat} />
             ))}
           </motion.div>
         </motion.div>
       </div>
+    </section>
+  );
+};
 
-      </section>
+const AnimatedStat = ({ stat }: { stat: { number: number, suffix: string, label: string } }) => {
+  const { number, suffix, label } = stat;
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+
+  useEffect(() => {
+    const animation = animate(count, number, { duration: 2, delay: 1 });
+    return animation.stop;
+  }, [count, number]);
+
+  return (
+    <div className="text-center">
+      <div className="text-3xl md:text-4xl font-bold text-gold mb-1 flex justify-center">
+        <motion.span>{rounded}</motion.span>
+        <span>{suffix}</span>
+      </div>
+      <div className="text-xs md:text-sm text-white/70">{label}</div>
+    </div>
   );
 };
 
